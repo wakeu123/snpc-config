@@ -4,7 +4,7 @@ services:
     container_name: snpc-proxy
     restart: always
     ports:
-      - 8081:80
+      - 81:80
     volumes:
       # - ./db-snpc.conf:/etc/nginx/conf.d/db-snpc.
       - ./api-snpc.conf:/etc/nginx/conf.d/api-snpc.conf
