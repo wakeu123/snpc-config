@@ -1,0 +1,17 @@
+services:
+  proxy:
+    image: nginx:1.23.3-alpine
+    container_name: snpc-proxy
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      # - ./db-snpc.conf:/etc/nginx/conf.d/db-snpc.
+      - ./api-snpc.conf:/etc/nginx/conf.d/api-snpc.conf
+      - ./api-snpc-erp.conf:/etc/nginx/conf.d/api-snpc-erp.conf
+    networks:
+      - snpc-network
+networks:
+  snpc-network:
+    external: true
+    name: snpc-network 
