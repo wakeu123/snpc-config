@@ -30,7 +30,7 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PRIVATE_KEY }}
+          key: ${{ secrets.PRIVATE_KEY }}
           port: 22
           source: "compose.yml,api-snpc.conf,api-snpc-erp.conf,db-snpc.conf"
           target: /opt/applications/fodecc/${{ env.IMAGE }}
